@@ -1,0 +1,8 @@
+version: '3.5'
+
+services:
+    mongodb:
+        container_name: mongodb
+        image: mongo:latest
+        ports:
+            - 27017:27017

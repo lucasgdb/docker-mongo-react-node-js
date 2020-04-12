@@ -1,0 +1,20 @@
+{
+    "name": "template",
+    "private": true,
+    "version": "1.0.0",
+    "author": "Lucas Bittencourt <lucasgdbittencourt@gmail.com>",
+    "repository": "git@github.com:lucasgdb/docker-mongo-react-node-js.git",
+    "license": "MIT",
+    "scripts": {
+        "web:start": "yarn workspace @template/web start",
+        "server:dev": "yarn workspace @template/server dev",
+        "start": "concurrently --kill-others \"yarn web:start\" \"yarn server:dev\"",
+        "build": "yarn workspaces run build"
+    },
+    "devDependencies": {
+        "concurrently": "^5.1.0"
+    },
+    "workspaces": [
+        "./packages/*"
+    ]
+}
