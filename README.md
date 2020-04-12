@@ -1,4 +1,4 @@
-# Docker, Mongo, React and Node with Typescript
+# Docker, Mongo, React and Node
 
 ## Requirements
 
@@ -18,6 +18,3 @@
 
 | [<img src="https://avatars3.githubusercontent.com/u/13838273?v=3&s=115"><br><sub>@lucasgdb</sub>](https://github.com/lucasgdb) |
 | :----------------------------------------------------------------------------------------------------------------------------: |
-
-#### [Docker + Node + Mongo with TypeScript](https://github.com/lucasgdb/docker-mongo-node-ts)
-#### [React with TypeScript](https://github.com/lucasgdb/react-ts)
