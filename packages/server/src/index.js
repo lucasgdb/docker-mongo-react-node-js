@@ -23,7 +23,7 @@ async function main() {
             useCreateIndex: true,
         });
 
-        app.listen(SERVER_PORT, () =>
+        app.listen(process.env.PORT || SERVER_PORT, () =>
             console.log('The server has been started.')
         );
     } catch (err) {
