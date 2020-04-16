@@ -15,21 +15,21 @@
 		"react-dom": "^16.13.1"
 	},
 	"devDependencies": {
-		"@testing-library/jest-dom": "^5.1.1",
-		"@testing-library/react": "^10.0.1",
-		"@testing-library/user-event": "^10.0.0",
+		"@testing-library/jest-dom": "^5.5.0",
+		"@testing-library/react": "^10.0.2",
+		"@testing-library/user-event": "^10.0.2",
 		"@types/axios": "^0.14.0",
-		"@types/jest": "^25.1.4",
-		"@types/node": "^13.9.2",
-		"@types/react": "^16.9.22",
-		"@types/react-dom": "^16.9.5",
-		"babel-plugin-root-import": "^6.4.1",
+		"@types/jest": "^25.2.1",
+		"@types/node": "^13.11.1",
+		"@types/react": "^16.9.34",
+		"@types/react-dom": "^16.9.6",
+		"babel-plugin-root-import": "^6.5.0",
 		"customize-cra": "^0.9.1",
 		"eslint": "^6.8.0",
 		"eslint-config-prettier": "^6.10.1",
-		"prettier": "^2.0.1",
+		"prettier": "^2.0.4",
 		"react-app-rewired": "^2.1.5",
-		"react-scripts": "^3.4.0"
+		"react-scripts": "^3.4.1"
 	},
 	"tslintConfig": {
 		"extends": "react-app"
