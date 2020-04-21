@@ -5,6 +5,7 @@
 	"license": "MIT",
 	"scripts": {
 		"start": "react-app-rewired start",
+		"start:production": "serve -s build",
 		"build": "react-app-rewired build",
 		"test": "react-app-rewired test",
 		"eject": "react-app-rewired eject"
@@ -29,7 +30,8 @@
 		"eslint-config-prettier": "^6.10.1",
 		"prettier": "^2.0.4",
 		"react-app-rewired": "^2.1.5",
-		"react-scripts": "^3.4.1"
+		"react-scripts": "^3.4.1",
+		"serve": "^11.3.0"
 	},
 	"tslintConfig": {
 		"extends": "react-app"
