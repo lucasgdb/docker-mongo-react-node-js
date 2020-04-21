@@ -1,8 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const dotenv = require('dotenv');
 
-const { SERVER_PORT } = require('./configs/default.json');
+dotenv.config();
+
+const { PORT, MONGO_URL } = process.env;
 
 const app = express();
 
@@ -11,24 +14,18 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.get('/api/v1/data', (req, res) =>
-    res.status(200).json({ response: 'hello-world' })
+	res.status(200).json({ response: 'hello-world' })
 );
 
-async function main() {
-    try {
-        await mongoose.connect('mongodb://localhost/test', {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useFindAndModify: false,
-            useCreateIndex: true,
-        });
+mongoose.connect(MONGO_URL, {
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
+	useFindAndModify: false,
+	useCreateIndex: true,
+}, err => {
+	if (err) throw err;
 
-        app.listen(process.env.PORT || SERVER_PORT, () =>
-            console.log('The server has been started.')
-        );
-    } catch (err) {
-        throw err;
-    }
-}
-
-main();
+	app.listen(PORT || 8080, () =>
+		console.log('The server has been started.')
+	);
+});

@@ -1,31 +1,33 @@
 {
-    "name": "@template/server",
-    "private": false,
-    "version": "1.0.0",
-    "main": "dist/index.js",
-    "license": "MIT",
-    "scripts": {
-        "dev": "nodemon src/index.js",
-        "build": "babel src --out-dir dist --copy-files --extensions '.js'",
-        "start": "node ."
-    },
-    "dependencies": {
-        "cors": "^2.8.5",
-        "express": "^4.17.1",
-        "mongoose": "^5.9.9"
-    },
-    "devDependencies": {
-        "@babel/cli": "^7.8.4",
-        "@babel/core": "^7.9.0",
-        "@babel/preset-env": "^7.9.5",
-        "@types/cors": "^2.8.6",
-        "@types/express": "^4.17.6",
-        "@types/mongoose": "^5.7.11",
-        "@types/node": "^13.11.1",
-        "babel-preset-minify": "^0.5.1",
-        "eslint": "^6.8.0",
-        "eslint-config-prettier": "^6.10.1",
-        "nodemon": "^2.0.3",
-        "prettier": "^2.0.4"
-    }
+	"name": "@template/server",
+	"private": false,
+	"version": "1.0.0",
+	"main": "dist/index.js",
+	"license": "MIT",
+	"scripts": {
+		"start": "nodemon src/index.js",
+		"start:production": "node .",
+		"build": "babel src --out-dir dist --copy-files --extensions '.js'"
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"mongoose": "^5.9.9"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.8.4",
+		"@babel/core": "^7.9.0",
+		"@babel/preset-env": "^7.9.5",
+		"@types/cors": "^2.8.6",
+		"@types/dotenv": "^8.2.0",
+		"@types/express": "^4.17.6",
+		"@types/mongoose": "^5.7.11",
+		"@types/node": "^13.11.1",
+		"babel-preset-minify": "^0.5.1",
+		"eslint": "^6.8.0",
+		"eslint-config-prettier": "^6.10.1",
+		"nodemon": "^2.0.3",
+		"prettier": "^2.0.4"
+	}
 }
