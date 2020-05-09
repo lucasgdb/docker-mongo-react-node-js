@@ -1,0 +1,10 @@
+version: '3.5'
+
+services:
+   database:
+      container_name: template_database
+      image: mongo:latest
+      ports:
+         - 27017:27017
+      expose:
+         - 27017
