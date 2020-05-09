@@ -1,8 +1,5 @@
 {
-	"extends": [
-		"eslint:latest",
-		"eslint-config-prettier"
-	],
+	"extends": ["eslint:latest", "eslint-config-prettier"],
 	"rules": {
 		"no-console": "on"
 	}
