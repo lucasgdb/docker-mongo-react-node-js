@@ -1,0 +1,9 @@
+node_modules
+dist
+.prettierrc
+Dockerfile
+modules.d.ts
+tsconfig.json
+yarn-error.log
+.env.example
+.env.development
