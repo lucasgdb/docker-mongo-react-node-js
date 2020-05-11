@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const configs = require('../configs');
+const configs = require('../configs/env');
 
 const { MONGO_URL } = configs;
 

@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-const configs = require('../configs');
+const configs = require('../configs/env');
 
 const { SECRET_HASH } = configs;
 
