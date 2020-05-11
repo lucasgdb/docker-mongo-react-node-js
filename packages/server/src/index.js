@@ -1,4 +1,5 @@
 const express = require('express');
+const compression = require('compression');
 const cors = require('cors');
 
 const configs = require('./configs/env');
@@ -9,6 +10,7 @@ require('./database');
 const app = express();
 const { PORT } = configs;
 
+app.use(compression());
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
