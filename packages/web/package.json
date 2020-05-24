@@ -38,7 +38,7 @@
 		"react-scripts": "^3.4.1",
 		"serve": "^11.3.1"
 	},
-	"tslintConfig": {
+	"eslintConfig": {
 		"extends": "react-app"
 	},
 	"browserslist": {
