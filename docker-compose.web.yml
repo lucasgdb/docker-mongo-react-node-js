@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+   web:
+      image: template/web
+      container_name: template_web
+      build: packages/web
+      ports:
+         - 5000:5000
+
+volumes:
+   template_data:
