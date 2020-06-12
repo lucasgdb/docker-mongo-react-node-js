@@ -1,0 +1,6 @@
+{
+	"extends": ["eslint:latest", "eslint-config-prettier"],
+	"rules": {
+		"no-console": "on"
+	}
+}
