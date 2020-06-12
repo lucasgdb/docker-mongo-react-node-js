@@ -6,12 +6,12 @@
 	"repository": "git@github.com:lucasgdb/docker-mongo-react-node-js.git",
 	"license": "MIT",
 	"scripts": {
-		"server:start": "yarn workspace @template/server start",
+		"api:start": "yarn workspace @template/api start",
 		"web:start": "yarn workspace @template/web start",
-		"start": "concurrently --kill-others \"yarn server:start\" \"yarn web:start\"",
-		"server:production": "yarn workspace @template/server run start:production",
+		"start": "concurrently --kill-others \"yarn api:start\" \"yarn web:start\"",
+		"api:production": "yarn workspace @template/api run start:production",
 		"web:production": "yarn workspace @template/web run start:production",
-		"server:build": "yarn workspace @template/server run build",
+		"api:build": "yarn workspace @template/api run build",
 		"web:build": "yarn workspace @template/web run build",
 		"build": "yarn workspaces run build"
 	},
