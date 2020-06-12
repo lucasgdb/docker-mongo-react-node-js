@@ -1,11 +1,11 @@
-# Docker, Mongo, React and Node
+# :rocket: Template for ReactJS and NodeJS using Docker and MongoDB :blue_heart:
 
-## Requirements
+## :exclamation: Requirements
 
 -  Docker (if you do not have the database installed locally)
 -  Yarn
 
-## How to
+## :question: How to
 
 -  Get started:
    -  Type `yarn` to install its dependencies.
@@ -24,7 +24,7 @@
    -  Type `yarn web:production` to start the production build of web.
    -  Access `http://localhost:5000` on the browser.
 
-## Using Docker
+## :whale: Using Docker
 
 -  Configuring the .env:
    -  Copy the `.env.example` from `packages/server` to `.env.production`
@@ -34,7 +34,26 @@
 -  Type `docker-compose up -d`
 -  Access `http://localhost:5000` on the browser.
 
-## Possible Errors
+## :cloud: Hosting (AWS EC2)
+
+-  Create a new EC2 instance on AWS Console Management
+   -  Get the `aws_deploy.pem` file and move it here.
+   -  Get the public DNS from AWS of your new instance (OS@DNS), for example: `ubuntu@ec2-18-228-24-132.sa-east-1.compute.amazonaws.com`
+-  Configure the .env:
+   -  Copy the `.env.example` from `packages/api` to `.env.production`
+   -  Copy the `.env.example` from `packages/web` to `.env.production`
+   -  Change the environment variables.
+-  Type `ssh -i "aws_deploy.pem" OS@AWS_DNS`
+-  Type `mkdir app`
+-  Type `ctrl + D`
+-  Type `rsync -avr -e "ssh -l user -i aws_deploy.pem" --exclude '**/*/node_modules' --exclude '**/*/dist' --exclude '**/*/build' packages docker-compose.yml OS@AWS_DNS:/home/OS/app`
+-  Type `ssh -i "aws_deploy.pem" OS@AWS_DNS`
+-  Type `cd app`
+-  Type `docker-compose down` to down and stop the running application (if it exists).
+-  Type `docker-compose up --build -d` to up and run the application.
+-  Access `IP:5000` or `DNS:5000` in the browser.
+
+## :interrobang: Possible Errors
 
 -  MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
    -  Be sure your `MONGO_URL` on `server .env` has the container's name instead of `localhost` (e.g: `mongodb://database/template`)
@@ -43,8 +62,16 @@
 -  ENOSPC: System limit for number of file watchers reached
    -  Run `echo 65536 | sudo tee -a /proc/sys/fs/inotify/max_user_watches` (Linux, re-run when needed)
 
-## Author
+## :boy: Author
 
 | [<img src="https://avatars3.githubusercontent.com/u/13838273?v=3&s=115"><br><sub>@lucasgdb</sub>](https://github.com/lucasgdb) |
 | :----------------------------------------------------------------------------------------------------------------------------: |
 
+
+## :octocat: Contributors
+
+[//]: contributor-faces
+
+<a href="https://github.com/lucasgdb"><img src="https://avatars3.githubusercontent.com/u/13838273?v=4" title="lucasgdb" width="80" height="80"></a>
+
+[//]: contributor-faces
