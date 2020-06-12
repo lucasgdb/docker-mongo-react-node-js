@@ -1,0 +1,13 @@
+node_modules
+.gitignore
+.prettierrc
+Dockerfile
+eslint.json
+jsconfig.json
+build
+.env.example
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+*.log

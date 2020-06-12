@@ -1,12 +1,11 @@
 FROM node:alpine AS build
 
 COPY package*.json yarn.lock ./
-RUN yarn --pure-lockfile --non-interactive
+RUN yarn install
 
-COPY public public
-COPY src src
-COPY config-overrides.js jsconfig.json nginx.conf .env.production ./
+COPY . .
 RUN yarn build
+RUN yarn install --production
 
 FROM nginx:alpine
 
@@ -15,4 +14,4 @@ COPY --from=build /nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 5000
 
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
