@@ -3,7 +3,7 @@
 	"private": true,
 	"version": "1.0.0",
 	"author": "Lucas Bittencourt <lucasgdbittencourt@gmail.com>",
-	"repository": "git@github.com:lucasgdb/docker-mongo-react-node-js.git",
+	"repository": "lucasgdb/docker-mongo-react-node-js",
 	"license": "MIT",
 	"scripts": {
 		"api:start": "yarn workspace @template/api start",
@@ -13,10 +13,12 @@
 		"web:production": "yarn workspace @template/web run start:production",
 		"api:build": "yarn workspace @template/api run build",
 		"web:build": "yarn workspace @template/web run build",
-		"build": "yarn workspaces run build"
+		"build": "yarn workspaces run build",
+		"contributors": "contributor-faces . -e !*[bot]"
 	},
 	"devDependencies": {
-		"concurrently": "^5.1.0"
+		"concurrently": "^5.2.0",
+		"contributor-faces": "^1.0.3"
 	},
 	"workspaces": [
 		"./packages/*"
