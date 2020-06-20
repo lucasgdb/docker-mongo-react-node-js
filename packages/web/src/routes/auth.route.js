@@ -10,15 +10,15 @@ const Unauthenticated = lazy(() => import('~/pages/Unauthenticated'));
 const Error404 = lazy(() => import('~/pages/Error404'));
 
 export default function AuthRoutes() {
-	return (
-		<Suspense fallback={<Load />}>
-			<Switch>
-				<Route exact path="/" component={Landing} />
-				<Route exact path="/signin" component={SignIn} />
-				<Route exact path="/signup" component={SignUp} />
-				<Route exact path="/app" component={Unauthenticated} />
-				<Route path="*" component={Error404} />
-			</Switch>
-		</Suspense>
-	);
+  return (
+    <Suspense fallback={<Load />}>
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/signin" component={SignIn} />
+        <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/app" component={Unauthenticated} />
+        <Route path="*" component={Error404} />
+      </Switch>
+    </Suspense>
+  );
 }

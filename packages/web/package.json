@@ -1,56 +1,62 @@
 {
-	"name": "@template/web",
-	"version": "1.0.0",
-	"private": false,
-	"license": "MIT",
-	"scripts": {
-		"start": "react-app-rewired start",
-		"start:production": "serve -s build",
-		"build": "react-app-rewired build",
-		"test": "react-app-rewired test",
-		"eject": "react-app-rewired eject"
-	},
-	"dependencies": {
-		"@material-ui/core": "^4.10.2",
-		"@material-ui/icons": "^4.9.1",
-		"axios": "^0.19.2",
-		"react": "^16.13.1",
-		"react-dom": "^16.13.1",
-		"react-router-dom": "^5.2.0"
-	},
-	"devDependencies": {
-		"@babel/helper-create-regexp-features-plugin": "^7.10.1",
-		"@testing-library/jest-dom": "^5.10.0",
-		"@testing-library/react": "^10.2.1",
-		"@testing-library/user-event": "^11.4.2",
-		"@types/axios": "^0.14.0",
-		"@types/jest": "^26.0.0",
-		"@types/node": "^14.0.13",
-		"@types/react": "^16.9.36",
-		"@types/react-dom": "^16.9.8",
-		"@types/react-router-dom": "^5.1.5",
-		"babel-plugin-root-import": "^6.5.0",
-		"customize-cra": "^1.0.0",
-		"eslint": "^7.2.0",
-		"eslint-config-prettier": "^6.11.0",
-		"prettier": "^2.0.5",
-		"react-app-rewired": "^2.1.6",
-		"react-scripts": "^3.4.1",
-		"serve": "^11.3.2"
-	},
-	"eslintConfig": {
-		"extends": "react-app"
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	}
+  "name": "@template/web",
+  "version": "1.0.0",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "start": "react-app-rewired start",
+    "start:production": "serve -s build",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/icons": "^4.9.1",
+    "axios": "^0.19.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/helper-create-regexp-features-plugin": "^7.10.1",
+    "@testing-library/jest-dom": "^5.10.0",
+    "@testing-library/react": "^10.2.1",
+    "@testing-library/user-event": "^11.4.2",
+    "@types/axios": "^0.14.0",
+    "@types/jest": "^26.0.0",
+    "@types/node": "^14.0.13",
+    "@types/react": "^16.9.36",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.5",
+    "babel-plugin-root-import": "^6.5.0",
+    "customize-cra": "^1.0.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4",
+    "prettier": "^2.0.5",
+    "react-app-rewired": "^2.1.6",
+    "react-scripts": "^3.4.1",
+    "serve": "^11.3.2"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

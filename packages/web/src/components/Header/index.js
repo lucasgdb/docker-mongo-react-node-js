@@ -12,72 +12,72 @@ import { useHistory, Link } from 'react-router-dom';
 import { useAuth } from '~/contexts/auth.context';
 
 const useStyles = makeStyles((theme) =>
-	createStyles({
-		root: {
-			flexGrow: 1,
-		},
-		menuButton: {
-			marginRight: theme.spacing(2),
-		},
-		title: {
-			flexGrow: 1,
-		},
-	})
+  createStyles({
+    root: {
+      flexGrow: 1,
+    },
+    menuButton: {
+      marginRight: theme.spacing(2),
+    },
+    title: {
+      flexGrow: 1,
+    },
+  })
 );
 
 export default function Header() {
-	const classes = useStyles();
-	const { push } = useHistory();
-	const { user, signOut } = useAuth();
+  const classes = useStyles();
+  const { push } = useHistory();
+  const { user, signOut } = useAuth();
 
-	return (
-		<AppBar position="static">
-			<Toolbar style={{ minHeight: 50 }}>
-				<IconButton
-					edge="start"
-					className={classes.menuButton}
-					color="inherit"
-					aria-label="menu"
-				>
-					<MenuIcon />
-				</IconButton>
+  return (
+    <AppBar position="static">
+      <Toolbar style={{ minHeight: 50 }}>
+        <IconButton
+          edge="start"
+          className={classes.menuButton}
+          color="inherit"
+          aria-label="menu"
+        >
+          <MenuIcon />
+        </IconButton>
 
-				<Typography variant="h6" className={classes.title}>
-					<Link to="/" style={{ color: 'white', textDecoration: 'none' }}>
-						Template
-					</Link>
-				</Typography>
+        <Typography variant="h6" className={classes.title}>
+          <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>
+            Template
+          </Link>
+        </Typography>
 
-				{user ? (
-					<>
-						<Tooltip title="Dashboard">
-							<Button color="inherit" onClick={() => push('/app')}>
-								Dashboard
-							</Button>
-						</Tooltip>
+        {user ? (
+          <>
+            <Tooltip title="Dashboard">
+              <Button color="inherit" onClick={() => push('/app')}>
+                Dashboard
+              </Button>
+            </Tooltip>
 
-						<Tooltip title="Sair">
-							<Button color="inherit" onClick={signOut}>
-								Sair
-							</Button>
-						</Tooltip>
-					</>
-				) : (
-					<>
-						<Tooltip title="Entrar">
-							<Button color="inherit" onClick={() => push('/signin')}>
-								Entrar
-							</Button>
-						</Tooltip>
+            <Tooltip title="Sair">
+              <Button color="inherit" onClick={signOut}>
+                Sair
+              </Button>
+            </Tooltip>
+          </>
+        ) : (
+          <>
+            <Tooltip title="Entrar">
+              <Button color="inherit" onClick={() => push('/signin')}>
+                Entrar
+              </Button>
+            </Tooltip>
 
-						<Tooltip title="Cadastro">
-							<Button color="inherit" onClick={() => push('/signup')}>
-								Cadastro
-							</Button>
-						</Tooltip>
-					</>
-				)}
-			</Toolbar>
-		</AppBar>
-	);
+            <Tooltip title="Cadastro">
+              <Button color="inherit" onClick={() => push('/signup')}>
+                Cadastro
+              </Button>
+            </Tooltip>
+          </>
+        )}
+      </Toolbar>
+    </AppBar>
+  );
 }

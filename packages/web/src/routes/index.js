@@ -7,13 +7,11 @@ import Load from '~/pages/Load';
 import { useAuth } from '~/contexts/auth.context';
 
 export default function Routes() {
-	const { loading, user } = useAuth();
+  const { loading, user } = useAuth();
 
-	if (loading) {
-		return <Load />;
-	}
+  if (loading) {
+    return <Load />;
+  }
 
-	return (
-		<BrowserRouter>{user ? <AppRoutes /> : <AuthRoutes />}</BrowserRouter>
-	);
+  return <BrowserRouter>{user ? <AppRoutes /> : <AuthRoutes />}</BrowserRouter>;
 }

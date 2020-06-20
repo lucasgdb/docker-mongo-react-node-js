@@ -5,21 +5,21 @@ import Header from '~/components/Header';
 import { useAuth } from '~/contexts/auth.context';
 
 export default function SignIn() {
-	const { signIn } = useAuth();
+  const { signIn } = useAuth();
 
-	function handleSignIn() {
-		signIn('lucasgdbittencourt@gmail.com', '123');
-	}
+  function handleSignIn() {
+    signIn('lucasgdbittencourt@gmail.com', '123');
+  }
 
-	return (
-		<>
-			<Header />
+  return (
+    <>
+      <Header />
 
-			<Container style={{ marginTop: 10 }}>
-				<Button color="primary" onClick={handleSignIn}>
-					Sign in
-				</Button>
-			</Container>
-		</>
-	);
+      <Container style={{ marginTop: 10 }}>
+        <Button color="primary" onClick={handleSignIn}>
+          Sign in
+        </Button>
+      </Container>
+    </>
+  );
 }

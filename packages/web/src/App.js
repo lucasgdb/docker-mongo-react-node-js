@@ -4,11 +4,11 @@ import Provider from '~/contexts';
 import Routes from '~/routes';
 
 function App() {
-	return (
-		<Provider>
-			<Routes />
-		</Provider>
-	);
+  return (
+    <Provider>
+      <Routes />
+    </Provider>
+  );
 }
 
 export default App;

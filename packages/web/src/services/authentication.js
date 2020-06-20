@@ -1,29 +1,33 @@
 import authAPI from './authAPI';
 
 export async function signIn(email, password) {
-	try {
-		const response = await authAPI.post('/', { email, password });
+  try {
+    const response = await authAPI.post('/', { email, password });
 
-		const { data } = response;
+    const { data } = response;
 
-		return data;
-	} catch (err) {
-		throw err;
-	}
+    return data;
+  } catch (err) {
+    console.log(err);
+
+    throw err;
+  }
 }
 
 export async function signUp(name, email, password) {
-	try {
-		const response = await authAPI.post('/register', {
-			name,
-			email,
-			password,
-		});
+  try {
+    const response = await authAPI.post('/register', {
+      name,
+      email,
+      password,
+    });
 
-		const data = response.data;
+    const { data } = response;
 
-		return data;
-	} catch (err) {
-		throw err;
-	}
+    return data;
+  } catch (err) {
+    console.log(err);
+
+    throw err;
+  }
 }
