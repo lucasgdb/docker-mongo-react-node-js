@@ -6,13 +6,14 @@
 	"repository": "lucasgdb/docker-mongo-react-node-js",
 	"license": "MIT",
 	"scripts": {
+		"api:dev": "yarn workspace @template/api run dev",
 		"api:start": "yarn workspace @template/api start",
-		"web:start": "yarn workspace @template/web start",
-		"start": "concurrently --kill-others \"yarn api:start\" \"yarn web:start\"",
-		"api:production": "yarn workspace @template/api run start:production",
-		"web:production": "yarn workspace @template/web run start:production",
 		"api:build": "yarn workspace @template/api run build",
+		"web:dev": "yarn workspace @template/web run dev",
+		"web:start": "yarn workspace @template/web start",
 		"web:build": "yarn workspace @template/web run build",
+		"dev": "concurrently --kill-others \"yarn api:dev\" \"yarn web:dev\"",
+		"start": "concurrently --kill-others \"yarn api:start\" \"yarn web:start\"",
 		"build": "yarn workspaces run build",
 		"contributors": "contributor-faces . -e !*[bot]"
 	},

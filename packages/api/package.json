@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
-    "start": "cross-env NODE_ENV=development nodemon src/index.js",
-    "start:production": "cross-env NODE_ENV=production node .",
+    "dev": "cross-env NODE_ENV=development nodemon src/index.js",
+    "start": "cross-env NODE_ENV=production node .",
     "build": "babel src --extensions \".js\" --out-dir dist --copy-files .env.production --no-copy-ignored"
   },
   "dependencies": {
