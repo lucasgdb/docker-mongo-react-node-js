@@ -1,0 +1,16 @@
+version: '3.5'
+
+services:
+   database:
+      container_name: template_database
+      restart: always
+      image: mongo:latest
+      ports:
+         - 27017:27017
+      expose:
+         - 27017
+      volumes:
+         - template_data:/data/db
+
+volumes:
+   template_data:
