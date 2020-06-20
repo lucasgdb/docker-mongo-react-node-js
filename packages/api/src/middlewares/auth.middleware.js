@@ -3,31 +3,31 @@ const jwt = require('jsonwebtoken');
 const { SECRET_HASH } = require('../configs/env');
 
 module.exports = function AuthMiddleware(req, res, next) {
-	const authHeader = req.headers.authorization;
+  const authHeader = req.headers.authorization;
 
-	if (!authHeader) {
-		return res.status(401).json({ message: 'No token provived.' });
-	}
+  if (!authHeader) {
+    return res.status(401).json({ message: 'No token provived.' });
+  }
 
-	const parts = authHeader.split(' ');
+  const parts = authHeader.split(' ');
 
-	if (parts.length !== 2) {
-		return res.status(401).json({ message: 'Token error' });
-	}
+  if (parts.length !== 2) {
+    return res.status(401).json({ message: 'Token error' });
+  }
 
-	const [schema, token] = parts;
+  const [schema, token] = parts;
 
-	if (!/^Bearer$/i.test(schema)) {
-		return res.status(401).json({ message: 'Token malformatted' });
-	}
+  if (!/^Bearer$/i.test(schema)) {
+    return res.status(401).json({ message: 'Token malformatted' });
+  }
 
-	jwt.verify(token, SECRET_HASH, (err, decoded) => {
-		if (err) {
-			return res.status(401).json({ message: 'Invalid token' });
-		}
+  jwt.verify(token, SECRET_HASH, (err, decoded) => {
+    if (err) {
+      return res.status(401).json({ message: 'Invalid token' });
+    }
 
-		req._id = decoded._id;
+    req._id = decoded._id;
 
-		return next();
-	});
+    return next();
+  });
 };

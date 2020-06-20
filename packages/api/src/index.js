@@ -16,7 +16,5 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/', routes);
 
-app.listen(PORT || 8080, () =>
-	// tslint:disable-next-line: no-console
-	console.log('server started!')
-);
+// eslint-disable-next-line no-console
+app.listen(PORT || 8080, () => console.log('server started!'));
